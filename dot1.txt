@@ -1,0 +1,19 @@
+en
+conf t
+int g0/0/0
+no ip address
+no shut
+exit
+
+int g0/0/0
+encapsulation dot1q 10
+ip address 10.0.0.1 255.0.0.0
+exit
+
+int g0/0/0
+encapsulation dot1q 20
+ip address 20.0.0.1 255.0.0.0
+exit
+
+exit
+sh ip interface br
