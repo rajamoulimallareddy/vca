@@ -1,0 +1,27 @@
+conf t 
+enable secret class
+con 0 
+password cisco
+login
+exit
+exit
+
+show running config
+
+hostname router1
+
+copy run stat 
+
+line vty 0 15
+password rakesh
+login end
+enable secret class
+exit
+
+conf t
+service password-configuration
+exit
+
+conf t
+banner motd #hello#
+

@@ -1,0 +1,19 @@
+en 
+conf t
+enable password 123
+line vty 0 4
+password 1234
+iinterface Gigabit Ethernet 0/0/0
+ip address 10.0.0.2 255.255.255.0
+no shut
+
+
+#####################
+#inpc
+
+ping 10.0.0.1
+telnet 10.0.0.1
+
+enter telnet password
+hostname hello
+
